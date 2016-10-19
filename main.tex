@@ -1,5 +1,80 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+
 \begin{document}
-(Type your content here.)
+
+
+\author{Maryam Kaka}
+\title{Getting Started with \LaTeX}
+\maketitle
+
+\tableofcontents 
+
+\newpage
+\section{Introduction}
+\subsection{Subsection 1}
+Hello World! %Heres a comment!
+
+\section{Math}
+\subsection{Inline Mode}
+Here's a random equations in the middle of the document $y = \alpha{x_1}^2 + \beta{x_2}$
+
+\subsection{Math Environment}
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+\section{Working With Environments}
+\subsection{Centre Environment}
+\begin{center}
+This text will be centred since it is inside a special 
+environment. Environments provide a efficient way of modifying 
+blocks of text within your document.
+\end{center}
+
+\subsection{Lists} \label{lists}
+\begin{itemize}		% unordered List 
+\item Point 1 of unordered list
+\item second point
+\end{itemize}
+
+\begin{enumerate}	%ordered List
+\item point 1 of ordered list
+\item \begin{enumerate}
+	\item nested point
+\end{enumerate}
+\end{enumerate}
+
+\subsection{Figures}
+Notice how \LaTeX finds the optimal location for the figure (usually this is at the beginning and end of the page. 
+
+\begin{figure}
+		\includegraphics[]{image}
+    \caption{Heres a figure and figure caption} \label{exampleFigure}
+\end{figure}
+
+\subsection{Tables}
+\begin{table}
+\caption{Heres a table caption} \label{exampleTable}
+\centering
+\begin{tabular}	{|l | c r|}
+	\hline
+	Column 1 & Col. 2 & col 3 \\
+    \hline
+    1	& 2	& 3	\\
+  	\hline
+\end{tabular}
+\end{table}
+
+\section{Referencing}
+\subsection{Working with references}
+See Table \ref{exampleTable} for an example of a table structure in \LaTeX
+
+\subsection{Bibliography}
+Here I'm referencing a book \cite{exampleRef}
+
+\bibliography{biblio} %----------------------------------------------------------
+\bibliographystyle{IEEEtran}
+
 \end{document}
